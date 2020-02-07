@@ -56,7 +56,13 @@ Firstly, install all of the packages:
 npm install
 ```
 
-Then run:
+Then run the initial build:
+
+```sh
+npm run build
+```
+
+And then run the watcher:
 
 ```sh
 npm run dev
