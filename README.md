@@ -1,4 +1,4 @@
-# Front-End Candidate Test
+# Front-End Contractor Test
 
 :wave: Welcome to The Telegraph front-end candidate test for contractors
 
