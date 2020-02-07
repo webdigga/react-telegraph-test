@@ -27,7 +27,7 @@ You should spend around two hours on this task. If you do not complete the task 
 * Application should be fully responsive
 * Pass the [ACs](#scroll-acceptance-criteria)
 * Ensure code is unit tested. We've set this up with [Jest](https://jestjs.io/) but feel free to use whatever you like
-* Comments should be called once the DOM is ready via [this endpoint](https://my-json-server.typicode.com/telegraph/front-end-exercise-contractors/comments). This call should be made client-side and injected with JavaScript
+* Comments should be called once the DOM is ready via [this endpoint](https://my-json-server.typicode.com/telegraph/front-end-exercise-contractors/comments). This call should be made client-side and injected with JavaScript.
 * Keep your JavaScript vanilla please :icecream:
 
 ### :mag_right: What we are looking for
@@ -35,7 +35,6 @@ You should spend around two hours on this task. If you do not complete the task 
 * An understanding of web fundamentals
 * A consistent and scalable approach to the test
 * An understanding of accessibility
-* Reasoning about web performance
 * Reasoning about SEO
 * Solid unit testing
 * Ability to translate designs into code
@@ -46,7 +45,7 @@ You should spend around two hours on this task. If you do not complete the task 
 
 ### :art: Designs
 
-* The designs are in [Figma](https://help.figma.com/article/116-getting-started) and can be found [here](https://www.figma.com/file/9AwWDASywE5qTuPGsdhbm5/Article-Template), alternatively there are exported design files in the `design` directory in the root of the project.
+* There are exported design files in the `design` directory in the root of the project.
 
 ## :floppy_disk: Set up
 
@@ -76,8 +75,8 @@ The above command will watch and deploy your code. The watchers for CSS and JS f
 
 ```
 Scenario: Show comments
-	Given that I access the single post page
-	Then the post page should return the associated comments
+	Given that I access the homepage
+	Then the home page should return comments
 	And each comment should show the username
 	And each comment should show the date of the comment
 	And each comment should show the comment body
