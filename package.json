@@ -1,9 +1,10 @@
 {
   "name": "telegraph-front-end-exercise",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Telegraph Front-End Exercise",
   "main": "server/app.js",
   "scripts": {
+	"predev": "npm run build",
     "dev": "npm-run-all -p dev:server watch:*",
     "dev:server": "nodemon server/app.js -e js,handlebars,json --watch server --watch views",
     "build": "npm-run-all build:*",
