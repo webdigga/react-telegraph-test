@@ -1,12 +1,31 @@
 class Posts {
     constructor ( content ) {
         this.content = content;
+        this.container = document.querySelector( '[data-js="posts"]' );
 
+        this.displayMenu();
         this.displayPosts();
     }
 
+    displayMenu() {
+        console.log( this.content.length );
+
+        const sortButton = '<button></button>';
+
+        const content = `
+            <div>${ this.content.length } Comments</div>
+            <div>
+                <span>Sort</span>
+                <button>Likes</button>
+            </div>
+        `;
+
+        this.container.innerHTML = content;
+
+    }
+
     displayPosts() {
-        const container = document.querySelector( '[data-js="posts"]' );
+        
         let content = '';
 
         this.content.forEach(( post ) => {
@@ -21,7 +40,11 @@ class Posts {
             `;
         });
 
-        container.innerHTML = content;
+        this.container.appendChild( content );
+    }
+
+    sortPosts () {
+
     }
 }
 
