@@ -1,9 +1,10 @@
-const Utils = require('./utils');
-const GetPosts = require('./services/getPosts');
+const Utils = require( './utils' );
+const GetPosts = require( './services/getPosts' );
+const Posts = require( './posts' );
 
 new Utils();
 
-// Get posts
-new GetPosts().requestPosts().then( ( posts ) => {
-	console.log( posts );
+// Get and display posts
+new GetPosts().requestPosts().then( ( content ) => {
+	new Posts( content );
 });
