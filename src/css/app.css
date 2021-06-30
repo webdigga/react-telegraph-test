@@ -1,5 +1,8 @@
 /* Core */
 @import 'core/reset.css';
+@import 'core/palette.css';
+@import 'core/variables.css';
+@import 'core/base.css';
 @import 'core/layout.css';
 
 /* Components */

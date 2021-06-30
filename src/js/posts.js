@@ -9,10 +9,10 @@ class Posts {
     displayMenu() {
         const postsMenuContainer = document.querySelector( '[data-js="posts-menu"]' );
         const content = `
-            <div>${ this.content.length } Comments</div>
-            <div>
-                <span>Sort</span>
-                <button>Likes</button>
+            <div class="posts__header">${ this.content.length } Comments</div>
+            <div class="posts__sort-container">
+                <span class="posts__sort">Sort</span>
+                <button class="posts__sort-button">Likes</button>
             </div>
         `;
 
@@ -26,10 +26,10 @@ class Posts {
 
         this.content.forEach(( post ) => {
             content = content + `
-                <article>
-                    <div>${ post.name }</div>
-                    <div>${ post.likes }</div>
-                    <p>${ post.body }</p>
+                <article class="posts__post">
+                    <div class="posts__name">${ post.name }</div>
+                    <div class="posts__likes">${ post.likes }</div>
+                    <p class="posts__body">${ post.body }</p>
                 </article>
             `;
         });
