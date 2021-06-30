@@ -4,8 +4,10 @@
 
 .posts__menu {
     align-items: center;
+    border-top: 1px solid var(--grey);
     display: flex;
     justify-content: space-between;
+    padding-top: var(--spacing);
 }
 
 .posts__header {
@@ -28,6 +30,11 @@
     justify-content: space-between;
     margin-top: var(--spacing);
     padding-top: var(--spacing);
+}
+
+.posts__post:last-child {
+    border-bottom: 1px solid var(--grey);
+    padding-bottom: var(--spacing);
 }
 
 .posts__name {
