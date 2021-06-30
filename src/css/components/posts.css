@@ -1,0 +1,9 @@
+.posts {
+    grid-column: 1/13;
+}
+
+@media screen and (min-width: 768px) {
+    .posts {
+        grid-column: 3/9;
+    }
+}

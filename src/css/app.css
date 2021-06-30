@@ -1,2 +1,9 @@
+/* Core */
 @import 'core/reset.css';
+@import 'core/layout.css';
+
+/* Components */
+@import 'components/posts.css';
+
+/* Elements */
 @import 'elements/site-logo.css';
