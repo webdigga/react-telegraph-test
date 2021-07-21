@@ -7,11 +7,14 @@ import React from 'react';
 class App extends React.Component {
 	constructor( props ) {
 		super( props );
+
 		this.state = {
 			error: null,
 			isLoaded: false,
 			items: []
 		};
+
+		this.handleSortState = this.handleSortState.bind( this );
 	}
 
 	componentDidMount() {
@@ -33,11 +36,17 @@ class App extends React.Component {
 		)
 	}
 
+	handleSortState( items ) {
+		this.setState({
+			items: items
+		});
+	}
+
 	render () {
 		return (
 			<div>
 				<Header />
-				<SortBar items = { this.state.items } />
+				<SortBar items = { this.state.items } onSortChange = { this.handleSortState } />
 				<CommentsList items = { this.state.items } />
 			</div>
 		);
