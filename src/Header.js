@@ -3,7 +3,11 @@ import React from 'react';
 
 class Header extends React.Component {
 	render () {
-		return <img src={ logo } className="logo" alt="logo" />;
+		return (
+			<div className="posts__menu">
+				<img src={ logo } className="site-logo" alt="logo" />
+			</div>
+		);
 	}
 }
 

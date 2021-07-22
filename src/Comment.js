@@ -5,11 +5,11 @@ class Comment extends React.Component {
 		const commentItem = this.props.commentItem;
 
 		return (
-			<li> 
-				<div>{ commentItem.name }</div>
-				<div>{ commentItem.likes }</div>
-				<div>{ commentItem.body }</div>
-			</li>
+			<article className="posts__post"> 
+				<div className="posts__name">{ commentItem.name }</div>
+				<div className="posts__likes">{ commentItem.likes }</div>
+				<p className="posts__body">{ commentItem.body }</p>
+			</article>
 		);
 	}
 }

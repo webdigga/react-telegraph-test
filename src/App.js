@@ -44,7 +44,7 @@ class App extends React.Component {
 
 	render () {
 		return (
-			<div>
+			<div className="posts">
 				<Header />
 				<SortBar items = { this.state.items } onSortChange = { this.handleSortState } />
 				<CommentsList items = { this.state.items } />

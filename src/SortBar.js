@@ -23,7 +23,9 @@ class SortBar extends React.Component {
 
 	render () {
 		return (
-			<button onClick={ () => { this.sortComments( this.props.items ) } }>Sort</button>
+			<div className="posts__menu">
+				<button onClick={ () => { this.sortComments( this.props.items ) } }>Sort</button>
+			</div>
 		);
 	}
 }
