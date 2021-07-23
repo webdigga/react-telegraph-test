@@ -8,9 +8,7 @@ class CommentsList extends React.Component {
 				{
 					this.props.items.map(( item ) => {
 						return (
-							<div className="posts__content">
-								<Comment commentItem = { item } key = { item.id } />
-							</div>
+							<Comment commentItem = { item } key = { item.id } />
 						);
 					})
 				}
