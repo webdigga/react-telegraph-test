@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import { unmountComponentAtNode } from "react-dom";
-import App from './App';
+import Header from './Header';
 
 let container = null;
 beforeEach(() => {
@@ -17,5 +17,5 @@ afterEach(() => {
 });
 
 it( 'renders without crashing', () => {
-	render( <App />, container );
+	render( <Header />, container );
 });
