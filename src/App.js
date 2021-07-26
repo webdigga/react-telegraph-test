@@ -2,55 +2,40 @@ import Header from './Header';
 import SortBar from './SortBar';
 import CommentsList from './CommentsList';
 import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
 
-class App extends React.Component {
-	constructor( props ) {
-		super( props );
+function App() {
+	const [items, setItems] = useState( [] );
 
-		this.state = {
-			error: null,
-			isLoaded: false,
-			items: []
-		};
-
-		this.handleSortState = this.handleSortState.bind( this );
-	}
-
-	componentDidMount() {
+	function fetchData() {
 		fetch( "https://my-json-server.typicode.com/telegraph/front-end-exercise-contractors/comments" )
 			.then( res => res.json() )
 			.then(
 			( result ) => {
-				this.setState({
-					isLoaded: true,
-					items: result
-				});
+				setItems( result );
 			},
 			( error ) => {
-				this.setState({
-					isLoaded: true,
-					error
-				});
+				console.log( error );
 			}
 		)
+	};
+
+	function handleSortState( items ) {
+		setItems( items );
 	}
 
-	handleSortState( items ) {
-		this.setState({
-			items: items
-		});
-	}
+	React.useEffect(() => {
+		// Runs after the first render() lifecycle
+		fetchData();
+	}, []);
 
-	render () {
-		return (
-			<div className="posts">
-				<Header />
-				<SortBar items = { this.state.items } onSortChange = { this.handleSortState } />
-				<CommentsList items = { this.state.items } />
-			</div>
-		);
-	}
+	return (
+		<div className="posts">
+			<Header />
+			<SortBar items = { items } onSortChange = { handleSortState } />
+			<CommentsList items = { items } />
+		</div>
+	);
 }
 
 export default App;
