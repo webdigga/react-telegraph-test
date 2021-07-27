@@ -1,9 +1,10 @@
 import logo from '../../logo.svg';
+import styles from './Header.module.css';
 
 function Header() {
 	return (
-		<div className="posts__menu">
-			<img src={ logo } className="site-logo" alt="logo" />
+		<div className={ styles.menu }>
+			<img src={ logo } className={ styles.logo } alt="logo" />
 		</div>
 	);
 }

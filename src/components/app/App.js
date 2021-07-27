@@ -1,7 +1,8 @@
 import Header from '../header/Header';
-import SortBar from '../../SortBar';
+import SortBar from '../sort-bar/SortBar';
 import CommentsList from '../comments-list/CommentsList';
 import React, { useState } from 'react';
+import styles from './App.module.css';
 
 function App() {
 	const [items, setItems] = useState( [] );
@@ -29,7 +30,7 @@ function App() {
 	}, []);
 
 	return (
-		<div className="posts">
+		<div className={ styles.posts }>
 			<Header />
 			<SortBar items = { items } onSortChange = { handleSortState } />
 			<CommentsList items = { items } />

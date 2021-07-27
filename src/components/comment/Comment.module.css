@@ -1,0 +1,29 @@
+.post {
+	border-top: 1px solid var(--grey);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: var(--spacing);
+	padding-top: var(--spacing);
+}
+
+.post:last-child {
+	border-bottom: 1px solid var(--grey);
+	padding-bottom: var(--spacing);
+}
+
+.name {
+	flex: 1 70%;
+	font-weight: 900;
+}
+
+.likes {
+	flex: 1 30%;
+	font-weight: 900;
+	text-align: right;
+}
+
+.body {
+	flex: 100%;
+	margin-top: var(--spacing);
+}

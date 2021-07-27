@@ -4,9 +4,3 @@
 @import 'css/core/variables.css';
 @import 'css/core/base.css';
 @import 'css/core/layout.css';
-
-/* Components */
-@import 'css/components/posts.css';
-
-/* Elements */
-@import 'css/elements/site-logo.css';

@@ -1,11 +1,19 @@
-.site-logo {
+.menu {
+	align-items: center;
+	border-top: 1px solid var(--grey);
+	display: flex;
+	justify-content: space-between;
+	padding-top: var(--spacing);
+}
+
+.logo {
 	height: 26px;
 	padding-bottom: var(--spacing);
 	width: 160px;
 }
 
 @media (min-width: 768px) {
-	.site-logo {
+	.logo {
 		height: 31px;
 		padding-bottom: var(--spacing-x2);
 		padding-top: var(--spacing);

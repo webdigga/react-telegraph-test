@@ -1,0 +1,20 @@
+.menu {
+	align-items: center;
+	border-top: 1px solid var(--grey);
+	display: flex;
+	justify-content: space-between;
+	padding-top: var(--spacing);
+}
+
+.header {
+	font-weight: 900;
+}
+
+.sortButton {
+	all: unset;
+	border: 1px solid;
+	border-radius: var(--spacing);
+	cursor: pointer;
+	margin-left: var(--spacing-half);
+	padding: var(--spacing-half) var(--spacing);
+}

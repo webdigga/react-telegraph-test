@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from './SortBar.module.css';
 
 function SortBar ( props ) {
 	const [sortOrder, setSortOrder] = useState( 'desc' );
@@ -14,11 +15,11 @@ function SortBar ( props ) {
 	}
 
 	return (
-		<div className="posts__menu">
-			<div className="posts__header">{ props.items.length } Comments</div>
-			<div className="posts__sort-container">
-				<span className="posts__sort">Sort</span>
-				<button className="posts__sort-button" onClick={ () => { sortComments( props.items ) } }>Likes</button>
+		<div className={ styles.menu }>
+			<div className={ styles.header }>{ props.items.length } Comments</div>
+			<div>
+				<span>Sort</span>
+				<button className={ styles.sortButton } onClick={ () => { sortComments( props.items ) } }>Likes</button>
 			</div>
 		</div>
 	);
