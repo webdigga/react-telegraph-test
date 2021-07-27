@@ -21,11 +21,11 @@ function App() {
 	};
 
 	function handleSortState( items ) {
-		setItems( items );
+		setItems( [...items] );
 	}
 
+	// Runs after the first render() lifecycle
 	React.useEffect(() => {
-		// Runs after the first render() lifecycle
 		fetchData();
 	}, []);
 
