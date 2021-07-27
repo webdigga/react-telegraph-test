@@ -1,7 +1,6 @@
-import Header from './Header';
-import SortBar from './SortBar';
-import CommentsList from './CommentsList';
-import './App.css';
+import Header from '../header/Header';
+import SortBar from '../../SortBar';
+import CommentsList from '../comments-list/CommentsList';
 import React, { useState } from 'react';
 
 function App() {
