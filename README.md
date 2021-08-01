@@ -1,6 +1,6 @@
 ## Description
 
-The Tetegraph candidate test build with React.
+The Telegraph candidate test build with React.
 
 ## Scripts
 
