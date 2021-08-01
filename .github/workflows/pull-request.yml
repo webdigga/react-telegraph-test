@@ -1,5 +1,5 @@
-name: unit-tests
-on: [pull_request]
+name: pull-request-actions
+on: [push]
 jobs:
   unit-tests:
     runs-on: ubuntu-latest
