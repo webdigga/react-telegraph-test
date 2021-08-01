@@ -94,3 +94,25 @@ Scenario: Order comments by likes
 :heavy_check_mark: Please also feedback on how you found the test - what did you like/not like about it?
 
 :heavy_check_mark: Feel free to send us any other additional notes. E.g. what you would have done with more time.
+
+
+## Description
+
+The Tetegraph candidate test.
+
+## Scripts
+
+In the project directory, you can run:
+
+### `npm install`
+
+Install dependancies for the project.
+
+### `npm run dev`
+
+Starts the watcher and loads the application on [http://localhost:3000/](http://localhost:3000/).
+
+### `npm run test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
