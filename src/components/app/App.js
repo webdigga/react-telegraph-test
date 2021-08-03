@@ -22,6 +22,8 @@ function App() {
 	 * Set state.
 	 */
 	const [items, setItems] = useState( [] );
+	const [isLoaded, setIsLoaded] = useState( false );
+	const [isError, setIsError] = useState( false );
 
 	/**
 	 * Fetch the data from the API, then set the items in the state.
@@ -32,9 +34,13 @@ function App() {
 			.then(
 			( result ) => {
 				setItems( result );
+				setIsLoaded( true );
 			},
 			( error ) => {
 				console.log( error );
+
+				setIsLoaded( true );
+				setIsError( true );
 			}
 		)
 	};
@@ -55,13 +61,30 @@ function App() {
 		fetchData();
 	}, []);
 
-	return (
-		<div className={ styles.posts }>
-			<Header />
-			<SortBar items = { items } onSortChange = { handleSortState } />
-			<CommentsList items = { items } />
-		</div>
-	);
+	/**
+	 * Whilst we wait for the data to load. 
+	 */
+	if ( !isLoaded ) {
+		return <div className={ styles.spinner }></div>
+
+	/**
+	 * Display an error to the user if something goes wrong with the API call. 
+	 */
+	} else if ( isError ) {
+		return <div>ERROR</div>
+
+	/**
+	 * Else lets render the component. 
+	 */
+	} else {
+		return (
+			<div className={ styles.posts }>
+				<Header />
+				<SortBar items = { items } onSortChange = { handleSortState } />
+				<CommentsList items = { items } />
+			</div>
+		);
+	}
 }
 
 export default App;
