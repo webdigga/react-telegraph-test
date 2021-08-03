@@ -1,15 +1,21 @@
 import React from 'react';
 import styles from './Comment.module.css'
 
+/**
+ * Renders a list item.
+ * Uses the data from props to render an individual list item from a loop in the parent component (CommentsList.js).
+ *
+ * @param {Props} props
+ */
 function Comment ( props ) {
 	const commentItem = props.commentItem;
 
 	return (
-		<article className={ styles.post }> 
+		<li className={ styles.post }> 
 			<div className={ styles.name }>{ commentItem.name }</div>
 			<div className={ styles.likes }>{ commentItem.likes }</div>
 			<p className={ styles.body }>{ commentItem.body }</p>
-		</article>
+		</li>
 	);
 }
 
