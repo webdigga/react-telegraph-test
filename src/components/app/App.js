@@ -1,6 +1,7 @@
 import Header from '../header/Header';
 import SortBar from '../sort-bar/SortBar';
 import CommentsList from '../comments-list/CommentsList';
+import Spinner from '../spinner/Spinner';
 import React, { useState } from 'react';
 import styles from './App.module.css';
 
@@ -65,7 +66,11 @@ function App() {
 	 * Whilst we wait for the data to load. 
 	 */
 	if ( !isLoaded ) {
-		return <div className={ styles.spinner }></div>
+		return (
+			<div className={ styles.posts }>
+				<Spinner />
+			</div>
+		);
 
 	/**
 	 * Display an error to the user if something goes wrong with the API call. 
