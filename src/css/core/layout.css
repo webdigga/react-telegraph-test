@@ -3,5 +3,4 @@
 	grid-template-columns: repeat(12, 1fr);
 	min-height: 500px;
 	padding: var(--spacing);
-	position: relative;
 }
