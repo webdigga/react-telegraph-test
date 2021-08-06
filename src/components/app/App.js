@@ -2,6 +2,7 @@ import Header from '../header/Header';
 import SortBar from '../sort-bar/SortBar';
 import CommentsList from '../comments-list/CommentsList';
 import Spinner from '../spinner/Spinner';
+import Error from '../error/Error';
 import React, { useState } from 'react';
 import styles from './App.module.css';
 
@@ -25,6 +26,7 @@ function App() {
 	const [items, setItems] = useState( [] );
 	const [isLoaded, setIsLoaded] = useState( false );
 	const [isError, setIsError] = useState( false );
+	const [errorMessage, setErrorMessage] = useState( '' );
 
 	/**
 	 * Fetch the data from the API, then set the items in the state.
@@ -38,10 +40,9 @@ function App() {
 				setIsLoaded( true );
 			},
 			( error ) => {
-				console.log( error );
-
 				setIsLoaded( true );
 				setIsError( true );
+				setErrorMessage( error );
 			}
 		)
 	};
@@ -76,7 +77,11 @@ function App() {
 	 * Display an error to the user if something goes wrong with the API call. 
 	 */
 	} else if ( isError ) {
-		return <div>ERROR</div>
+		return (
+			<div className={ styles.posts }>
+				<Error message = { errorMessage } />
+			</div>
+		);
 
 	/**
 	 * Else lets render the component. 
