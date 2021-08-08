@@ -5,7 +5,7 @@ import styles from './Spinner.module.css';
  */
 function Spinner() {
     return (        
-        <div className={ styles.spinner }></div>        
+        <div className={ styles.spinner } data-test="spinner"></div>        
     )
 }
 

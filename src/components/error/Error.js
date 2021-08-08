@@ -7,7 +7,7 @@ import styles from './Error.module.css';
  */
 function Error( props ) {
     return (        
-        <div className={ styles.error }>{ props.message }</div>        
+        <div className={ styles.error } data-test="error">{ props.message }</div>        
     )
 }
 

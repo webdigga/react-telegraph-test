@@ -11,10 +11,10 @@ function Comment ( props ) {
 	const commentItem = props.commentItem;
 
 	return (
-		<li className={ styles.post }> 
-			<div className={ styles.name }>{ commentItem.name }</div>
-			<div className={ styles.likes }>{ commentItem.likes }</div>
-			<p className={ styles.body }>{ commentItem.body }</p>
+		<li className={ styles.post } data-test="comment-post"> 
+			<div className={ styles.name } data-test="comment-name">{ commentItem.name }</div>
+			<div className={ styles.likes } data-test="comment-likes">{ commentItem.likes }</div>
+			<p className={ styles.body } data-test="comment-body">{ commentItem.body }</p>
 		</li>
 	);
 }

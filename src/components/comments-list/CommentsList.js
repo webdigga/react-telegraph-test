@@ -14,7 +14,7 @@ function CommentsList ( props ) {
 			{
 				props.items.map(( item ) => {
 					return (
-						<Comment commentItem = { item } key = { item.id } />
+						<Comment commentItem = { item } key = { item.id } itemId = { item.id } />
 					);
 				})
 			}
