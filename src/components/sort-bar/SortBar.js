@@ -33,10 +33,10 @@ function SortBar ( props ) {
 
 	return (
 		<div className={ styles.menu }>
-			<div className={ styles.header }>{ props.items.length } Comments</div>
+			<div className={ styles.header }><span data-test="sortbar-comment-total">{ props.items.length }</span> Comments</div>
 			<div>
 				<span>Sort</span>
-				<button className={ styles.sortButton } onClick={ () => { sortComments( props.items ) } }>Likes</button>
+				<button className={ styles.sortButton } onClick={ () => { sortComments( props.items ) } } data-test="sortbar-sort-button">Likes</button>
 			</div>
 		</div>
 	);

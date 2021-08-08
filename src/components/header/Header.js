@@ -6,8 +6,8 @@ import styles from './Header.module.css';
  */
 function Header() {
 	return (
-		<div className={ styles.menu }>
-			<img src={ logo } className={ styles.logo } alt="logo" />
+		<div className={ styles.menu } data-test="header">
+			<img src={ logo } className={ styles.logo } alt="logo" data-test="header-logo" />
 		</div>
 	);
 }
