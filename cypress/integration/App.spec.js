@@ -2,6 +2,7 @@ describe( 'Application', () => {
 	
 	before(() => {
 		cy.visit( 'http://localhost:3000' );
+		cy.injectAxe();
 	});
 
 	it( 'has a logo', () => {
@@ -52,5 +53,9 @@ describe( 'Application', () => {
 				"have.text",
 				"4"
 			); 
+	});
+
+	it( 'Has no detectable a11y violations on load (with custom parameters)', () => {
+		cy.checkA11y();
 	});
 });

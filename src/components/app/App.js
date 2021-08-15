@@ -88,11 +88,12 @@ function App() {
 	 */
 	} else {
 		return (
-			<div className={ styles.posts }>
+			<section className={ styles.posts }>
+				<h1 class="heading">React Telegraph test</h1>
 				<Header />
 				<SortBar items = { items } onSortChange = { handleSortState } />
 				<CommentsList items = { items } />
-			</div>
+			</section>
 		);
 	}
 }
